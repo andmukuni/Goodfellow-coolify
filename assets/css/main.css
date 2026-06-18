@@ -6248,6 +6248,53 @@ section,
   align-items: start;
 }
 
+.privacy-page #privacy.section {
+  padding-top: 120px;
+}
+
+.privacy-hero {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 2.75rem;
+}
+
+.privacy-hero h1 {
+  font-size: clamp(1.85rem, 4vw, 2.65rem);
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-bottom: 0.85rem;
+  line-height: 1.2;
+}
+
+.privacy-hero-lead {
+  font-size: 1.08rem;
+  color: color-mix(in srgb, var(--default-color), transparent 18%);
+  line-height: 1.6;
+  margin: 0 auto 1.75rem;
+  max-width: 680px;
+}
+
+.privacy-hero .dpa-badge {
+  max-width: 100%;
+  margin: 0 auto 1.15rem;
+  text-align: left;
+}
+
+.privacy-hero-meta {
+  font-size: 0.88rem;
+  color: color-mix(in srgb, var(--default-color), transparent 38%);
+  margin: 0 0 1.15rem;
+  letter-spacing: 0.01em;
+}
+
+.privacy-hero-intro {
+  font-size: 1.02rem;
+  color: color-mix(in srgb, var(--default-color), transparent 12%);
+  line-height: 1.65;
+  margin: 0 auto;
+  max-width: 760px;
+}
+
 .privacy-header--compact {
   margin-bottom: 1.75rem;
   padding-bottom: 0;
@@ -6819,44 +6866,46 @@ section,
 # Data Protection Badge & Cookie Banner
 --------------------------------------------------------------*/
 .dpa-badge {
-  margin-bottom: 2rem;
+  margin-bottom: 0;
 }
 
 .dpa-badge-inner {
   display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  padding: 1.25rem 1.5rem;
-  background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
-  border: 1px solid #a5d6a7;
-  border-left: 4px solid #28a745;
-  border-radius: 10px;
+  align-items: center;
+  gap: 1.1rem;
+  padding: 1.15rem 1.4rem;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color) 8%, #ffffff) 0%, color-mix(in srgb, var(--accent-color) 14%, #ffffff) 100%);
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 55%);
+  border-left: 4px solid var(--accent-color);
+  border-radius: 12px;
 }
 
 .dpa-badge-icon {
-  font-size: 2rem;
-  color: #28a745;
+  font-size: 2.15rem;
+  color: var(--accent-color);
   flex-shrink: 0;
 }
 
 .dpa-badge-text {
   display: flex;
   flex-direction: column;
-  gap: 0.15rem;
+  gap: 0.2rem;
   font-size: 0.95rem;
-  color: #2c3e50;
+  color: color-mix(in srgb, var(--default-color), transparent 10%);
 }
 
 .dpa-badge-text strong {
-  color: #1b5e20;
+  color: var(--heading-color);
+  font-size: 1rem;
 }
 
 .dpa-badge-text small {
-  color: #558b2f;
+  color: color-mix(in srgb, var(--accent-color), #2c3e50 35%);
   font-size: 0.85rem;
 }
 
 .dpa-badge--footer {
+  margin-bottom: 0;
   max-width: 520px;
 }
 
@@ -6885,6 +6934,22 @@ section,
 }
 
 @media (max-width: 991.98px) {
+  .privacy-page #privacy.section {
+    padding-top: 100px;
+  }
+
+  .privacy-hero {
+    margin-bottom: 2rem;
+  }
+
+  .privacy-hero-lead {
+    font-size: 1rem;
+  }
+
+  .privacy-hero-intro {
+    font-size: 0.98rem;
+  }
+
   .privacy-doc {
     grid-template-columns: 1fr;
     gap: 1.25rem;
