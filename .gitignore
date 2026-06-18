@@ -1,0 +1,5 @@
+well-known.zip
+__MACOSX/
+.DS_Store
+.env
+.env.*

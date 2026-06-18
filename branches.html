@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Our Branches - Goodfellow Finance Limited</title>
+  <meta name="description" content="Find a Goodfellow Finance Limited branch near you. We have 28 branches across all provinces in Zambia offering payday loans and salary advances.">
+  <meta name="keywords" content="Goodfellow Finance branches, microfinance branches Zambia, loan offices, Lusaka, Copperbelt, Luapula, Northern, Eastern, Western, Southern, Central, Muchinga, North-Western">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Custom Branches Page Styles -->
+  <style>
+    .branches-page .stats-item {
+      background: #28a745;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
+    }
+
+    .branches-page .stats-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(40, 167, 69, 0.3);
+      background: #218838;
+    }
+
+    .branches-page .stats-item i {
+      color: #fff;
+      opacity: 0.9;
+    }
+
+    .branches-page .stats-item h3,
+    .branches-page .stats-item p {
+      color: #fff;
+      margin: 0;
+    }
+
+    .branches-page .stats-item h3 {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+
+    .province-card {
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      border: none;
+      margin-bottom: 30px;
+    }
+
+    .province-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 45px rgba(0,0,0,0.15);
+    }
+
+    .province-card .card-header {
+      background: #28a745;
+      padding: 20px 25px;
+      border: none;
+    }
+
+    .province-card .card-header h4 {
+      margin: 0;
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    .province-card .card-body {
+      padding: 25px;
+    }
+
+    .branch-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .branch-list li {
+      padding: 20px;
+      margin-bottom: 15px;
+      background: #f8f9fa;
+      border-radius: 12px;
+      border-left: 4px solid #28a745;
+      transition: all 0.3s ease;
+    }
+
+    .branch-list li:last-child {
+      margin-bottom: 0;
+    }
+
+    .branch-list li:hover {
+      transform: translateX(10px);
+      border-left-color: #218838;
+      box-shadow: 0 5px 15px rgba(40, 167, 69, 0.2);
+      background: #e9f7ef;
+    }
+
+    .branch-list li strong {
+      color: #28a745;
+      font-size: 1.1rem;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .branch-list li i {
+      color: #28a745;
+      margin-right: 5px;
+    }
+
+    .cta-box {
+      background: #28a745;
+      border-radius: 20px;
+      box-shadow: 0 15px 50px rgba(40, 167, 69, 0.3);
+    }
+
+    .cta-box h3,
+    .cta-box p {
+      color: #fff;
+    }
+
+    .cta-box .btn-primary {
+      background: #fff;
+      color: #28a745;
+      border: none;
+      padding: 15px 40px;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+    }
+
+    .cta-box .btn-primary:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 30px rgba(255,255,255,0.3);
+      color: #218838;
+      background: #f8f9fa;
+    }
+
+    .section-title h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #2c3e50;
+      position: relative;
+      padding-bottom: 15px;
+    }
+
+    .section-title h2:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: #28a745;
+      border-radius: 2px;
+    }
+
+    .section-title p {
+      color: #7f8c8d;
+      font-size: 1.1rem;
+    }
+
+    /* Search Box */
+    .search-box {
+      background: #fff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+      margin-bottom: 50px;
+    }
+
+    .search-box input {
+      border: 2px solid #e0e0e0;
+      border-radius: 50px;
+      padding: 15px 25px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .search-box input:focus {
+      border-color: #28a745;
+      box-shadow: 0 0 20px rgba(40, 167, 69, 0.2);
+    }
+
+    .search-box .btn {
+      border-radius: 50px;
+      padding: 15px 35px;
+      background: #28a745;
+      border: none;
+      font-weight: 600;
+    }
+
+    /* Province Filter Tabs */
+    .province-filter {
+      margin-bottom: 40px;
+    }
+
+    .province-filter .nav-pills .nav-link {
+      color: #28a745;
+      border-radius: 50px;
+      padding: 12px 25px;
+      margin: 5px;
+      border: 2px solid #28a745;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+
+    .province-filter .nav-pills .nav-link:hover,
+    .province-filter .nav-pills .nav-link.active {
+      background: #28a745;
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+    }
+  </style>
+</head>
+
+<body class="branches-page">
+
+  <!-- Header Placeholder -->
+  <div id="header-placeholder"></div>
+
+  <main class="main">
+
+   <br> <br><br><br>
+
+    <!-- Branches Section -->
+    <section id="branches" class="branches section">
+
+      <div class="container">
+
+      
+        <!-- Search Box -->
+        <div class="search-box" data-aos="fade-up" data-aos-delay="100">
+          <div class="row align-items-center">
+            <div class="col-lg-8 col-md-7">
+              <input type="text" id="branchSearch" class="form-control" placeholder="🔍 Search by province, town, or branch name...">
+            </div>
+            <div class="col-lg-4 col-md-5 mt-3 mt-md-0">
+              <select class="form-select" id="provinceFilter" style="border-radius: 50px; padding: 15px 25px; border: 2px solid #e0e0e0;">
+                <option value="all">All Provinces</option>
+                <option value="lusaka">Lusaka Province</option>
+                <option value="copperbelt">Copperbelt Province</option>
+                <option value="southern">Southern Province</option>
+                <option value="eastern">Eastern Province</option>
+                <option value="central">Central Province</option>
+                <option value="northern">Northern Province</option>
+                <option value="luapula">Luapula Province</option>
+                <option value="western">Western Province</option>
+                <option value="northwestern">North-Western Province</option>
+                <option value="muchinga">Muchinga Province</option>
+              </select>
+            </div>
+          </div>
+        </div><!-- End Search Box -->
+
+        <!-- Quick Stats -->
+        <div class="row gy-4 mb-5">
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="stats-item text-center">
+              <i class="bi bi-shop fs-1 mb-3"></i>
+              <h3 class="mb-2">28</h3>
+              <p class="mb-0">Branches Nationwide</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="stats-item text-center">
+              <i class="bi bi-geo-alt fs-1 mb-3"></i>
+              <h3 class="mb-2">10</h3>
+              <p class="mb-0">Provinces Covered</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="stats-item text-center">
+              <i class="bi bi-clock fs-1 mb-3"></i>
+              <h3 class="mb-2">Mon-Fri</h3>
+              <p class="mb-0">8:00 AM - 5:00 PM</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="stats-item text-center">
+              <i class="bi bi-calendar-check fs-1 mb-3"></i>
+              <h3 class="mb-2">Sat</h3>
+              <p class="mb-0">8:00 AM - 1:00 PM</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Province Filter Tabs -->
+        <div class="province-filter text-center" data-aos="fade-up" data-aos-delay="100">
+          <h4 class="mb-4" style="color: #2c3e50;">Quick Jump to Province</h4>
+          <div class="d-flex flex-wrap justify-content-center">
+            <button class="btn nav-link active" onclick="filterProvince('all')">All</button>
+            <button class="btn nav-link" onclick="filterProvince('lusaka')">Lusaka</button>
+            <button class="btn nav-link" onclick="filterProvince('copperbelt')">Copperbelt</button>
+            <button class="btn nav-link" onclick="filterProvince('southern')">Southern</button>
+            <button class="btn nav-link" onclick="filterProvince('eastern')">Eastern</button>
+            <button class="btn nav-link" onclick="filterProvince('central')">Central</button>
+            <button class="btn nav-link" onclick="filterProvince('northern')">Northern</button>
+            <button class="btn nav-link" onclick="filterProvince('luapula')">Luapula</button>
+            <button class="btn nav-link" onclick="filterProvince('western')">Western</button>
+            <button class="btn nav-link" onclick="filterProvince('northwestern')">North-Western</button>
+            <button class="btn nav-link" onclick="filterProvince('muchinga')">Muchinga</button>
+          </div>
+        </div>
+
+        <!-- Branches by Province -->
+        <div class="row gy-4" id="branchesContainer">
+
+          <!-- Lusaka Province -->
+          <div class="col-lg-6 province-item" data-province="lusaka" data-aos="fade-up" data-aos-delay="100">
+            <div class="province-card h-100">
+              <div class="card-header bg-success text-white">
+                <h4 class="mb-0"><i class="bi bi-geo-alt-fill me-2"></i>Lusaka Province</h4>
+              </div>
+              <div class="card-body">
+                <ul class="branch-list">
+                  <li><strong>Head Office - Rhodespark, Lusaka.</strong>
+                    Plot No. 4448/8 Chaholi Road, Rhodespark<br>
+                    <i class="bi bi-telephone"></i> +260 211 238 719 | +260 957 224 792<br>
+                    <i class="bi bi-envelope"></i> info@goodfellow.co.zm<br>
+                    Mobile Dept.
+                     <i class="bi bi-telephone"></i> +260 970 410 755 | +260 762 171 861<br>
+                  </li>
+                  <li><strong>Cairo Road Branch</strong>
+                    Cairo Road, Woodgate House<br>
+                    Plot No. 2103/4/5 202,<br>
+                    Cairo Road Next To Stanbic, Lusaka.<br>
+                    <i class="bi bi-telephone"></i> +260 972 835 214
+                    </li>
+
+                  </li>
+                  <li><strong>Lusaka Premium House</strong>
+                    Plot 7431 Unit 603, Independence Avenue, Lusaka.<br>
+                    <i class="bi bi-telephone"></i> +260 972 835 207
+                  </li>
+                  <li><strong>Lusaka UTH</strong>
+                    Kovo Workshop
+                    Opp. Centre Of Excellence,<br> 
+                    Pediatrics Hospital, Lusaka.
+                    <br>
+                    <i class="bi bi-telephone"></i> +260 972 835 286
+                  </li>
+                  <li><strong>Chongwe Branch</strong>
+                    Shop No. 5, Maimba Mall, Great East Road, Main Town, 
+                    <br>Chongwe.<br>
+                    <i class="bi bi-telephone"></i> +260 972 835 367
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Copperbelt Province -->
+          <div class="col-lg-6 province-item" data-province="copperbelt" data-aos="fade-up" data-aos-delay="200">
+            <div class="province-card h-100">
+              <div class="card-header bg-success text-white">
+                <h4 class="mb-0"><i class="bi bi-geo-alt-fill me-2"></i>Copperbelt Province</h4>
+              </div>
+              <div class="card-body">
+                <ul class="branch-list">
+                  <li><strong>Kitwe Branch</strong>
+                    Permanent House, Ground Floor
+                    <br>Stand No. 495/6, Kaunda Square, Kitwe.
+                    <br>
+                    <i class="bi bi-telephone"></i> +260 763 882 434
+                  </li>
+                  <li><strong>Ndola Branch</strong>
+                    Watch It Grow Complex, 1st Floor Room 13,<br>
+                    Chimwemwe Road, Ndola.
+                    <br>
+                    <i class="bi bi-telephone"></i> +260 763 882 431
+                  </li>
+                  <li><strong>Chingola Branch</strong>
+                    The Park Mall, Shop No. 4, Chingola<br>
+                    <i class="bi bi-telephone"></i> +260 763 882 432
+                  </li>
+                  <li><strong>Mufulira Branch</strong>
+                    Central Business District, Mufulira.<br>
+                    <i class="bi bi-telephone"></i> +260 212 XXX XXX
+                  </li>
+                  <li><strong>Luanshya Branch</strong>
+                    Kafubu House, Ground Floor, Luanshya.<br>
+                    <i class="bi bi-telephone"></i> +260 763 882 433
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Southern Province -->
+          <div class="col-lg-6 province-item" data-province="southern" data-aos="fade-up" data-aos-delay="300">
+            <div class="province-card h-100">
+              <div class="card-header bg-success text-white">
+                <h4 class="mb-0"><i class="bi bi-geo-alt-fill me-2"></i>Southern Province</h4>
+              </div>
+              <div class="card-body">
+                <ul class="branch-list">
+                  <li><strong>Livingstone Branch</strong>
+                    Plot No. 106, Room 203/205,
+                    Liso House, Zsic Building<br>
+                    Mosi-O-Tunya Road, Livingstone.<br>
+                    <i class="bi bi-telephone"></i> +260 763 882 425
+                  </li>
+                  <li><strong>Choma Branch</strong>
+                    Section J1 Off Plot 79A<br>
+                    Choma Hotel, Ground Floor, Choma.<br>
+                    <i class="bi bi-telephone"></i> +260 763 882 426
+                  </li>
+                  <li><strong>Mazabuka Branch</strong>
+                    Galaba House, Room G-04,
+                    <br>Mazabuka.<br>
+                    <i class="bi bi-telephone"></i> +260 762 172 370
+                  </li>
+                  <li><strong>Monze Branch</strong>
+                    Acropolis Enterprise Ltd,
+                    Tamorana Complex,<br>
+                    Plot No. 670,
+                    Livingstone Road, Monze.<br>
+                    <i class="bi bi-telephone"></i> +260 762 172 517
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Eastern Province -->
+          <div class="col-lg-6 province-item" data-province="eastern" data-aos="fade-up" data-aos-delay="400">
+            <div class="province-card h-100">
+              <div class="card-header bg-success text-white">
+                <h4 class="mb-0"><i class="bi bi-geo-alt-fill me-2"></i>Eastern Province</h4>
+              </div>
+              <div class="card-body">
+                <ul class="branch-list">
+                  <li><strong>Chipata Branch</strong>
+                    Mikalile Complex, Office No. 10, <br>
+                    Next To Shoprite, Umozhi Highway, Chipata.<br>
+                    <i class="bi bi-telephone"></i> +260 763 882 428
+                  </li>
+                  <li><strong>Petauke Branch</strong>
+                    Plot No. Pet/105, Next To Zanaco/Syngenta<br>
+                    Main Boma Road, Petauke.<br>
+                    <i class="bi bi-telephone"></i> +260 763 882 427
+                  </li>
+                  <li><strong>Lundazi Branch</strong>
+                    Plot No. 642, Town Centre, Lundazi.<br>
+                    <i class="bi bi-telephone"></i> +260 763 882 429
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Central Province -->
+          <div class="col-lg-6 province-item" data-province="central" data-aos="fade-up" data-aos-delay="500">
+            <div class="province-card h-100">
+              <div class="card-header bg-success text-white">
+                <h4 class="mb-0"><i class="bi bi-geo-alt-fill me-2"></i>Central Province</h4>
+              </div>
+              <div class="card-body">
+                <ul class="branch-list">
+                  <li><strong>Kabwe Branch</strong>
+                    Stand 7700a, Shop No. 28, Next To Debonairs<br>
+                    Independence Road, Kabwe.
+                    <br>
+                    <i class="bi bi-telephone"></i> +260 763 882 430
+                  </li>
+                  <li><strong>Mumbwa Branch</strong>
+                    Shop No. Lw 07<br>
+                    Dt Business Complex, Mumbwa.
+                    <br>
+                    <i class="bi bi-telephone"></i> +260 763 882 405
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Northern Province -->
+          <div class="col-lg-6 province-item" data-province="northern" data-aos="fade-up" data-aos-delay="600">
+            <div class="province-card h-100">
+              <div class="card-header bg-success text-white">
+                <h4 class="mb-0"><i class="bi bi-geo-alt-fill me-2"></i>Northern Province</h4>
+              </div>
+              <div class="card-body">
+                <ul class="branch-list">
+                  <li><strong>Kasama Branch</strong>
+                    Room 1 & 2, Machi Chibusa Building<br>
+                    Plot No. 3226, Mukulumpe Rd, Kasama.<br>
+                    <i class="bi bi-telephone"></i> +260 763 882 403
+                  </li>
+                  <li><strong>Mbala Branch</strong>
+                    Old Green Shop, Makanta Road<br>
+                    Town Market, Mbala.<br>
+                    <i class="bi bi-telephone"></i> +260 972 835 316
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Luapula Province -->
+          <div class="col-lg-6 province-item" data-province="luapula" data-aos="fade-up" data-aos-delay="700">
+            <div class="province-card h-100">
+              <div class="card-header bg-success text-white">
+                <h4 class="mb-0"><i class="bi bi-geo-alt-fill me-2"></i>Luapula Province</h4>
+              </div>
+              <div class="card-body">
+                <ul class="branch-list">
+                  <li><strong>Mansa Branch</strong>
+                    Kabwe Bwafwano Mall, Plot No. 1971<br>
+                    Kawambwa Rd Opp. Provincial Admin,
+                    Mansa.<br>
+                    <i class="bi bi-telephone"></i> +260 763 882 402
+                  </li>
+                  <li><strong>Kawambwa Branch</strong>
+                    Plot No. 2794, Shop No. 8,<br>
+                    Old Mushota Road, Kawambwa.<br>
+                    <i class="bi bi-telephone"></i> +260 954 392 821
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Western Province -->
+          <div class="col-lg-6 province-item" data-province="western" data-aos="fade-up" data-aos-delay="800">
+            <div class="province-card h-100">
+              <div class="card-header bg-success text-white">
+                <h4 class="mb-0"><i class="bi bi-geo-alt-fill me-2"></i>Western Province</h4>
+              </div>
+              <div class="card-body">
+                <ul class="branch-list">
+                  <li><strong>Mongu Branch</strong>
+                    Barotse Mall, Shop No. 6, Mongu.<br>
+                    <i class="bi bi-telephone"></i> +260 763 882 397
+                  </li>
+                  <li><strong>Kaoma Branch</strong>
+                    Freedom Way, Next To Ngucha Filling Station,<br>
+                    Kaoma.<br>
+                    <i class="bi bi-telephone"></i> +260 763 882 407
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- North-Western Province -->
+          <div class="col-lg-6 province-item" data-province="northwestern" data-aos="fade-up" data-aos-delay="900">
+            <div class="province-card h-100">
+              <div class="card-header bg-success text-white">
+                <h4 class="mb-0"><i class="bi bi-geo-alt-fill me-2"></i>North-Western Province</h4>
+              </div>
+              <div class="card-body">
+                <ul class="branch-list">
+                  <li><strong>Solwezi Branch</strong>
+                    Chikamoneka Complex, SS Vasant Building,<br>
+                    Plot No. 163 Room 6, Next To Solwezi Local Court,<br>
+                    Solwezi.<br>
+                    <i class="bi bi-telephone"></i> +260 763 882 398
+                  </li>
+                  <li><strong>Kalumbila Branch</strong>
+                    Plot # 1002, Banana 2 East,<br>
+                    Nkisu Road, Kalumbila.<br>
+                    <i class="bi bi-telephone"></i> +260 761 454 886
+                    </li>
+                  <li><strong>Lumwana Branch</strong>
+                    Noamba Shopping Complex, Mwinilunga Road,<br>
+                    Manyama, Lumwana.<br>
+                    <i class="bi bi-telephone"></i> +260 772 490 971
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Muchinga Province -->
+          <div class="col-lg-6 province-item" data-province="muchinga" data-aos="fade-up" data-aos-delay="1000">
+            <div class="province-card h-100">
+              <div class="card-header bg-success text-white">
+                <h4 class="mb-0"><i class="bi bi-geo-alt-fill me-2"></i>Muchinga Province</h4>
+              </div>
+              <div class="card-body">
+                <ul class="branch-list">
+                  <li><strong>Chinsali Branch</strong>
+                    Plot No. 525, Along Nambuluma Road,<br>
+                    Opposite Post Office, Chinsali.<br>
+                    <i class="bi bi-telephone"></i> +260 763 882 401
+                  </li>
+                  <li><strong>Nakonde Branch</strong>
+                    Shop No. 1 Wamukopeka Building, Nakonde.<br>
+                    <i class="bi bi-telephone"></i> +260 762 172 511
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Contact CTA -->
+        <div class="row mt-5">
+          <div class="col-12" data-aos="fade-up">
+            <div class="cta-box text-center p-5">
+              <i class="bi bi-headset fs-1 mb-4" style="color: #fff;"></i>
+              <h3 class="mb-3">Can't Find Your Branch?</h3>
+              <p class="mb-4">Contact our Head Office and we'll help you find the nearest branch or arrange alternative service delivery options including online applications and mobile money disbursements.</p>
+              <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a href="contact.html" class="btn btn-primary btn-lg">
+                  <i class="bi bi-envelope-fill me-2"></i> Contact Us
+                </a>
+                <a href="appointment.html" class="btn btn-primary btn-lg">
+                  <i class="bi bi-cash-coin me-2"></i> Apply Online
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Branches Section -->
+
+  </main>
+
+  <!-- Footer Placeholder -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+  
+  <!-- Component Loader -->
+  <script src="assets/js/component-loader.js"></script>
+
+  <!-- Branch Search & Filter Script -->
+  <script>
+    // Search functionality
+    document.getElementById('branchSearch').addEventListener('keyup', function(e) {
+      const searchTerm = e.target.value.toLowerCase();
+      const provinceItems = document.querySelectorAll('.province-item');
+      
+      provinceItems.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        if (text.includes(searchTerm)) {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+
+    // Province filter dropdown
+    document.getElementById('provinceFilter').addEventListener('change', function(e) {
+      filterProvince(e.target.value);
+    });
+
+    // Filter function
+    function filterProvince(province) {
+      const provinceItems = document.querySelectorAll('.province-item');
+      const navLinks = document.querySelectorAll('.province-filter .nav-link');
+      
+      // Update active button
+      navLinks.forEach(link => link.classList.remove('active'));
+      event.target.classList.add('active');
+      
+      // Filter provinces
+      provinceItems.forEach(item => {
+        if (province === 'all' || item.dataset.province === province) {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+      
+      // Scroll to branches
+      document.getElementById('branchesContainer').scrollIntoView({ 
+        behavior: 'smooth', 
+        block: 'start' 
+      });
+    }
+
+    // Add animation on hover for branch items
+    document.querySelectorAll('.branch-list li').forEach(item => {
+      item.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateX(10px)';
+      });
+      item.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateX(0)';
+      });
+    });
+  </script>
+
+</body>
+
+</html>

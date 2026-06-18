@@ -1,0 +1,110 @@
+<!-- Goodfellow Finance Live Chat Widget -->
+<div id="gf-chat-widget" class="gf-chat-widget" aria-live="polite">
+  <!-- Floating Toggle Button -->
+  <button id="gf-chat-toggle" class="gf-chat-toggle" aria-controls="gf-chat-panel" aria-expanded="false" aria-label="Open live chat">
+    <i class="bi bi-chat-dots"></i>
+    <span class="gf-chat-badge" id="gf-chat-badge">1</span>
+  </button>
+
+  <!-- Chat Panel -->
+  <section id="gf-chat-panel" class="gf-chat-panel" role="dialog" aria-modal="false" aria-labelledby="gf-chat-title">
+    <header class="gf-chat-header d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center">
+        <div class="gf-bot-avatar me-2">
+          <i class="bi bi-robot"></i>
+        </div>
+        <div>
+          <h2 id="gf-chat-title" class="gf-chat-title">Goodfellow Assistant</h2>
+          <p class="gf-chat-subtitle mb-0">
+            <span class="gf-status-dot"></span> Online now
+          </p>
+        </div>
+      </div>
+      <button type="button" id="gf-chat-close" class="gf-chat-close" aria-label="Close chat">
+        <i class="bi bi-x-lg"></i>
+      </button>
+    </header>
+
+    <div class="gf-chat-body">
+      <!-- Chat conversation area -->
+      <div id="gf-chat-messages" class="gf-chat-messages"></div>
+
+      <!-- Typing indicator -->
+      <div id="gf-typing-indicator" class="gf-typing-indicator gf-hidden">
+        <div class="gf-message gf-message-bot">
+          <div class="gf-message-content">
+            <span class="gf-typing-dots">
+              <span></span><span></span><span></span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chat input footer -->
+    <div class="gf-chat-footer">
+      <div class="gf-chat-input-wrapper">
+        <input 
+          type="text" 
+          id="gf-chat-input" 
+          class="gf-chat-input" 
+          placeholder="Type your message..."
+          aria-label="Type your message"
+          autocomplete="off"
+        />
+        <button 
+          type="button" 
+          id="gf-chat-send" 
+          class="gf-chat-send-btn"
+          aria-label="Send message"
+        >
+          <i class="bi bi-send-fill"></i>
+        </button>
+      </div>
+      <div class="gf-chat-footer-note">
+        <small class="text-muted">Mon–Fri: 8AM–5PM, Sat: 8AM–1PM</small>
+      </div>
+    </div>
+
+    <!-- Agent Contact Form (hidden initially) -->
+    <div id="gf-agent-form" class="gf-agent-form gf-hidden">
+      <div class="gf-agent-form-header">
+        <button type="button" id="gf-back-to-chat" class="gf-back-btn">
+          <i class="bi bi-arrow-left"></i> Back to chat
+        </button>
+      </div>
+      <div class="gf-agent-form-body">
+        <h3 class="mb-2">Contact Our Team</h3>
+        <p class="text-muted small mb-3">Fill out the form below and we'll get back to you within 24 hours.</p>
+        
+        <form action="forms/contact.php" method="post" class="php-email-form" id="gf-contact-form">
+          <input type="hidden" name="subject" value="Live Chat - Agent Request" />
+          
+          <div class="mb-2">
+            <input type="text" class="form-control form-control-sm" id="agentName" name="name" placeholder="Your Name" required>
+          </div>
+          <div class="mb-2">
+            <input type="email" class="form-control form-control-sm" id="agentEmail" name="email" placeholder="Email Address" required>
+          </div>
+          <div class="mb-2">
+            <input type="tel" class="form-control form-control-sm" id="agentPhone" name="phone" placeholder="Phone Number" required>
+          </div>
+          <div class="mb-2">
+            <textarea class="form-control form-control-sm" id="agentMessage" name="message" placeholder="Your Message" rows="3" required></textarea>
+          </div>
+
+          <div class="my-2">
+            <div class="loading">Sending...</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Thanks! Our team will contact you shortly.</div>
+          </div>
+
+          <button type="submit" class="btn btn-success btn-sm w-100">
+            Send Message <i class="bi bi-send-fill ms-1"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- /Goodfellow Finance Live Chat Widget -->
