@@ -49,82 +49,44 @@
 
         <div id="dpa-badge-placeholder"></div>
 
-        <div class="privacy-header" data-aos="fade-up">
+        <div class="privacy-header privacy-header--compact" data-aos="fade-up">
           <div class="header-content">
             <div class="last-updated">Version 1.0 · Effective 18 June 2026 · Last updated 18 June 2026</div>
-            <h1>Privacy &amp; Data Protection Policy</h1>
-            <p class="intro-text">Goodfellow Finance Limited ("Goodfellow", "we", "us", "our") is a registered microfinance institution licensed by the Bank of Zambia. This policy explains how we collect, use, store, share and protect personal data when you use our website, visit our branches, apply for a loan, use our mobile services including <strong>*774#</strong>, or otherwise interact with us.</p>
+            <p class="intro-text">Goodfellow Finance Limited is a Bank of Zambia licensed microfinance institution. This policy explains how we collect, use, store, share and protect your personal data — including via our website, branches, and <strong>*774#</strong> mobile services.</p>
           </div>
         </div>
 
-        <div class="privacy-tabs-layout" data-aos="fade-up">
+        <div class="privacy-shell" data-aos="fade-up">
 
-          <aside class="privacy-tab-sidebar">
-            <p class="privacy-tab-heading"><i class="bi bi-list-ul"></i> Policy sections</p>
-            <nav class="nav nav-pills flex-lg-column privacy-tab-nav" id="privacyTabNav" role="tablist" aria-label="Privacy policy sections">
+          <nav class="nav nav-pills privacy-cat-tabs" id="privacyCatNav" role="tablist" aria-label="Privacy policy categories">
+            <button class="nav-link active" type="button" role="tab" data-bs-toggle="tab" data-bs-target="#cat-overview" aria-selected="true">
+              <i class="bi bi-info-circle"></i> Overview
+            </button>
+            <button class="nav-link" type="button" role="tab" data-bs-toggle="tab" data-bs-target="#cat-data" aria-selected="false">
+              <i class="bi bi-database"></i> Your Data
+            </button>
+            <button class="nav-link" type="button" role="tab" data-bs-toggle="tab" data-bs-target="#cat-security" aria-selected="false">
+              <i class="bi bi-shield-lock"></i> Security &amp; Rights
+            </button>
+            <button class="nav-link" type="button" role="tab" data-bs-toggle="tab" data-bs-target="#cat-digital" aria-selected="false">
+              <i class="bi bi-phone"></i> Digital Services
+            </button>
+            <button class="nav-link" type="button" role="tab" data-bs-toggle="tab" data-bs-target="#cat-legal" aria-selected="false">
+              <i class="bi bi-balance-scale"></i> Legal
+            </button>
+          </nav>
 
-              <button class="nav-link active" id="who-tab" data-bs-toggle="tab" data-bs-target="#who" type="button" role="tab" aria-controls="who" aria-selected="true">
-                <span class="tab-num">1</span> Who we are
-              </button>
-              <button class="nav-link" id="scope-tab" data-bs-toggle="tab" data-bs-target="#scope" type="button" role="tab" aria-controls="scope" aria-selected="false">
-                <span class="tab-num">2</span> Scope
-              </button>
-              <button class="nav-link" id="definitions-tab" data-bs-toggle="tab" data-bs-target="#definitions" type="button" role="tab" aria-controls="definitions" aria-selected="false">
-                <span class="tab-num">3</span> Key terms
-              </button>
-              <button class="nav-link" id="data-tab" data-bs-toggle="tab" data-bs-target="#data" type="button" role="tab" aria-controls="data" aria-selected="false">
-                <span class="tab-num">4</span> Data we collect
-              </button>
-              <button class="nav-link" id="bases-tab" data-bs-toggle="tab" data-bs-target="#bases" type="button" role="tab" aria-controls="bases" aria-selected="false">
-                <span class="tab-num">5</span> Lawful bases
-              </button>
-              <button class="nav-link" id="sensitive-tab" data-bs-toggle="tab" data-bs-target="#sensitive" type="button" role="tab" aria-controls="sensitive" aria-selected="false">
-                <span class="tab-num">6</span> Sensitive data
-              </button>
-              <button class="nav-link" id="sharing-tab" data-bs-toggle="tab" data-bs-target="#sharing" type="button" role="tab" aria-controls="sharing" aria-selected="false">
-                <span class="tab-num">7</span> Sharing
-              </button>
-              <button class="nav-link" id="retention-tab" data-bs-toggle="tab" data-bs-target="#retention" type="button" role="tab" aria-controls="retention" aria-selected="false">
-                <span class="tab-num">8</span> Retention
-              </button>
-              <button class="nav-link" id="security-tab" data-bs-toggle="tab" data-bs-target="#security" type="button" role="tab" aria-controls="security" aria-selected="false">
-                <span class="tab-num">9</span> Security
-              </button>
-              <button class="nav-link" id="breach-tab" data-bs-toggle="tab" data-bs-target="#breach" type="button" role="tab" aria-controls="breach" aria-selected="false">
-                <span class="tab-num">10</span> Data breaches
-              </button>
-              <button class="nav-link" id="rights-tab" data-bs-toggle="tab" data-bs-target="#rights" type="button" role="tab" aria-controls="rights" aria-selected="false">
-                <span class="tab-num">11</span> Your rights
-              </button>
-              <button class="nav-link" id="cookies-tab" data-bs-toggle="tab" data-bs-target="#cookies" type="button" role="tab" aria-controls="cookies" aria-selected="false">
-                <span class="tab-num">12</span> Cookies
-              </button>
-              <button class="nav-link" id="marketing-tab" data-bs-toggle="tab" data-bs-target="#marketing" type="button" role="tab" aria-controls="marketing" aria-selected="false">
-                <span class="tab-num">13</span> Marketing
-              </button>
-              <button class="nav-link" id="automated-tab" data-bs-toggle="tab" data-bs-target="#automated" type="button" role="tab" aria-controls="automated" aria-selected="false">
-                <span class="tab-num">14</span> Automated decisions
-              </button>
-              <button class="nav-link" id="ussd-tab" data-bs-toggle="tab" data-bs-target="#ussd" type="button" role="tab" aria-controls="ussd" aria-selected="false">
-                <span class="tab-num">15</span> USSD &amp; mobile
-              </button>
-              <button class="nav-link" id="changes-tab" data-bs-toggle="tab" data-bs-target="#changes" type="button" role="tab" aria-controls="changes" aria-selected="false">
-                <span class="tab-num">16</span> Policy changes
-              </button>
-              <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">
-                <span class="tab-num">17</span> Contact us
-              </button>
-              <button class="nav-link" id="law-tab" data-bs-toggle="tab" data-bs-target="#law" type="button" role="tab" aria-controls="law" aria-selected="false">
-                <span class="tab-num">18</span> Governing law
-              </button>
+          <div class="privacy-shell-body">
+            <div class="tab-content privacy-cat-panels" id="privacyCatContent">
 
-            </nav>
-          </aside>
-
-          <div class="privacy-tab-main">
-            <div class="tab-content privacy-tab-panels" id="privacyTabContent">
-
-          <div class="tab-pane fade show active content-section" id="who" role="tabpanel" aria-labelledby="who-tab" tabindex="0">
+              <!-- OVERVIEW -->
+              <div class="tab-pane fade show active" id="cat-overview" role="tabpanel" tabindex="0">
+                <nav class="nav privacy-section-pills" aria-label="Overview sections">
+                  <a class="nav-link active" href="#who" data-section="who">1. Who we are</a>
+                  <a class="nav-link" href="#scope" data-section="scope">2. Scope</a>
+                  <a class="nav-link" href="#definitions" data-section="definitions">3. Key terms</a>
+                </nav>
+                <article class="policy-block" id="who">
             <h2>1. Who we are</h2>
             <p><strong>Goodfellow Finance Limited</strong> is an indigenous Zambian microfinance institution established in 2017 and registered with the Bank of Zambia. We provide payday salary advances and short-term loans to employed individuals across Zambia through 28 branches nationwide.</p>
             <ul>
@@ -139,9 +101,9 @@
               <li><strong>Email:</strong> <a href="mailto:customercare@goodfellow.co.zm">customercare@goodfellow.co.zm</a></li>
               <li><strong>Postal:</strong> The DPO, Goodfellow Finance Limited, Plot No. 4448/8 Chaholi Road, Rhodespark, Lusaka, Zambia</li>
             </ul>
-          </div>
+                </article>
 
-          <div class="tab-pane fade content-section" id="scope" role="tabpanel" aria-labelledby="scope-tab" tabindex="0">
+                <article class="policy-block" id="scope">
             <h2>2. Scope of this policy</h2>
             <p>This policy applies to personal data processed through:</p>
             <ul>
@@ -153,9 +115,9 @@
               <li>Customer complaints and feedback</li>
             </ul>
             <p>This policy does not apply to third-party websites linked from our site. Please review their privacy policies separately.</p>
-          </div>
+                </article>
 
-          <div class="tab-pane fade content-section" id="definitions" role="tabpanel" aria-labelledby="definitions-tab" tabindex="0">
+                <article class="policy-block" id="definitions">
             <h2>3. Key terms (DPA Section 2)</h2>
             <ul>
               <li><strong>Personal data</strong> — information identifying or relating to an identifiable individual (e.g. name, NRC number, phone number, bank details).</li>
@@ -165,9 +127,19 @@
               <li><strong>Processing</strong> — any operation on personal data including collection, storage, use, disclosure or deletion.</li>
               <li><strong>Consent</strong> — a freely given, specific, informed and unambiguous indication of your agreement to processing (Section 15).</li>
             </ul>
-          </div>
+                </article>
+              </div>
 
-          <div class="tab-pane fade content-section" id="data" role="tabpanel" aria-labelledby="data-tab" tabindex="0">
+              <!-- YOUR DATA -->
+              <div class="tab-pane fade" id="cat-data" role="tabpanel" tabindex="0">
+                <nav class="nav privacy-section-pills" aria-label="Your data sections">
+                  <a class="nav-link active" href="#data" data-section="data">4. Data we collect</a>
+                  <a class="nav-link" href="#bases" data-section="bases">5. Lawful bases</a>
+                  <a class="nav-link" href="#sensitive" data-section="sensitive">6. Sensitive data</a>
+                  <a class="nav-link" href="#sharing" data-section="sharing">7. Sharing</a>
+                  <a class="nav-link" href="#retention" data-section="retention">8. Retention</a>
+                </nav>
+                <article class="policy-block" id="data">
             <h2>4. Personal data we collect</h2>
             <p>We collect different categories depending on your relationship with us:</p>
             <div class="table-responsive">
@@ -185,9 +157,9 @@
                 </tbody>
               </table>
             </div>
-          </div>
+                </article>
 
-          <div class="tab-pane fade content-section" id="bases" role="tabpanel" aria-labelledby="bases-tab" tabindex="0">
+                <article class="policy-block" id="bases">
             <h2>5. Purposes &amp; lawful bases</h2>
             <p>We process personal data only where a lawful basis under Section 13 of the Data Protection Act applies:</p>
             <div class="table-responsive">
@@ -208,15 +180,15 @@
                 </tbody>
               </table>
             </div>
-          </div>
+                </article>
 
-          <div class="tab-pane fade content-section" id="sensitive" role="tabpanel" aria-labelledby="sensitive-tab" tabindex="0">
+                <article class="policy-block" id="sensitive">
             <h2>6. Sensitive personal data</h2>
             <p>Loan processing requires financial and employment-related personal data. We process this data only for lending, recovery, regulatory compliance and related legitimate purposes. We apply additional safeguards including restricted access, staff confidentiality obligations and secure storage systems.</p>
             <p>We do not sell your personal data to third parties.</p>
-          </div>
+                </article>
 
-          <div class="tab-pane fade content-section" id="sharing" role="tabpanel" aria-labelledby="sharing-tab" tabindex="0">
+                <article class="policy-block" id="sharing">
             <h2>7. Sharing &amp; disclosure</h2>
             <p>We may share personal data with:</p>
             <ul>
@@ -230,9 +202,9 @@
               <li><strong>Law enforcement or courts</strong> — when required by law or court order</li>
             </ul>
             <p>We require all third-party processors to protect personal data in line with the Data Protection Act, 2021.</p>
-          </div>
+                </article>
 
-          <div class="tab-pane fade content-section" id="retention" role="tabpanel" aria-labelledby="retention-tab" tabindex="0">
+                <article class="policy-block" id="retention">
             <h2>8. Retention</h2>
             <p>We retain personal data only for as long as necessary for the purposes collected:</p>
             <ul>
@@ -244,9 +216,17 @@
               <li><strong>Website logs:</strong> typically up to 12 months</li>
             </ul>
             <p>When data is no longer needed, we securely delete or anonymise it.</p>
-          </div>
+                </article>
+              </div>
 
-          <div class="tab-pane fade content-section" id="security" role="tabpanel" aria-labelledby="security-tab" tabindex="0">
+              <!-- SECURITY & RIGHTS -->
+              <div class="tab-pane fade" id="cat-security" role="tabpanel" tabindex="0">
+                <nav class="nav privacy-section-pills" aria-label="Security and rights sections">
+                  <a class="nav-link active" href="#security" data-section="security">9. Security</a>
+                  <a class="nav-link" href="#breach" data-section="breach">10. Data breaches</a>
+                  <a class="nav-link" href="#rights" data-section="rights">11. Your rights</a>
+                </nav>
+                <article class="policy-block" id="security">
             <h2>9. Security</h2>
             <p>We implement technical and organisational measures to protect personal data, including:</p>
             <ul>
@@ -256,14 +236,14 @@
               <li>Staff confidentiality and data protection training</li>
               <li>Regular review of our information security practices</li>
             </ul>
-          </div>
+                </article>
 
-          <div class="tab-pane fade content-section" id="breach" role="tabpanel" aria-labelledby="breach-tab" tabindex="0">
+                <article class="policy-block" id="breach">
             <h2>10. Data-breach notification</h2>
             <p>If a personal data breach occurs that is likely to result in a risk to your rights, we will notify the <strong>Office of the Data Protection Commissioner</strong> within <strong>24 hours</strong> as required by Section 49 of the Act. Where the breach is likely to result in a high risk to you, we will also notify affected data subjects without undue delay.</p>
-          </div>
+                </article>
 
-          <div class="tab-pane fade content-section" id="rights" role="tabpanel" aria-labelledby="rights-tab" tabindex="0">
+                <article class="policy-block" id="rights">
             <h2>11. Your rights as a data subject</h2>
             <p>Under the Data Protection Act, 2021, you have the right to:</p>
             <ul>
@@ -276,14 +256,23 @@
             </ul>
             <p>To exercise your rights, email <a href="mailto:customercare@goodfellow.co.zm">customercare@goodfellow.co.zm</a> or write to our DPO at the head office address above. We will respond within the timeframe prescribed by the Act.</p>
             <p><strong>Office of the Data Protection Commissioner:</strong> <a href="https://www.dataprotection.gov.zm" target="_blank" rel="noopener noreferrer">www.dataprotection.gov.zm</a></p>
-          </div>
+                </article>
+              </div>
 
-          <div class="tab-pane fade content-section" id="cookies" role="tabpanel" aria-labelledby="cookies-tab" tabindex="0">
+              <!-- DIGITAL SERVICES -->
+              <div class="tab-pane fade" id="cat-digital" role="tabpanel" tabindex="0">
+                <nav class="nav privacy-section-pills" aria-label="Digital services sections">
+                  <a class="nav-link active" href="#cookies" data-section="cookies">12. Cookies</a>
+                  <a class="nav-link" href="#marketing" data-section="marketing">13. Marketing</a>
+                  <a class="nav-link" href="#automated" data-section="automated">14. Automated decisions</a>
+                  <a class="nav-link" href="#ussd" data-section="ussd">15. USSD &amp; mobile</a>
+                </nav>
+                <article class="policy-block" id="cookies">
             <h2>12. Cookies</h2>
             <p>Our website uses cookies and similar technologies. For full details on the cookies we use and how to manage your preferences, please read our <a href="cookies.html">Cookie Notice</a>.</p>
-          </div>
+                </article>
 
-          <div class="tab-pane fade content-section" id="marketing" role="tabpanel" aria-labelledby="marketing-tab" tabindex="0">
+                <article class="policy-block" id="marketing">
             <h2>13. Marketing communications</h2>
             <p>We may send you information about loan products and promotions by SMS, email or phone only where permitted by law and, where required, with your consent. You may opt out at any time by:</p>
             <ul>
@@ -291,24 +280,32 @@
               <li>Clicking unsubscribe in marketing emails</li>
               <li>Contacting us at <a href="mailto:customercare@goodfellow.co.zm">customercare@goodfellow.co.zm</a></li>
             </ul>
-          </div>
+                </article>
 
-          <div class="tab-pane fade content-section" id="automated" role="tabpanel" aria-labelledby="automated-tab" tabindex="0">
+                <article class="policy-block" id="automated">
             <h2>14. Automated decisions &amp; profiling</h2>
             <p>We may use automated systems to assist with credit assessment and affordability checks. You will not be subject to a decision based solely on automated processing that produces legal or similarly significant effects without human review where required by the Act. You may request human intervention by contacting our DPO.</p>
-          </div>
+                </article>
 
-          <div class="tab-pane fade content-section" id="ussd" role="tabpanel" aria-labelledby="ussd-tab" tabindex="0">
+                <article class="policy-block" id="ussd">
             <h2>15. USSD &amp; mobile services</h2>
             <p>When you use <strong>*774#</strong> or other mobile loan channels, your mobile number and transaction data are processed by your mobile network operator and shared with us as necessary to deliver the service. By using these services you acknowledge this processing as described in this policy and our loan terms.</p>
-          </div>
+                </article>
+              </div>
 
-          <div class="tab-pane fade content-section" id="changes" role="tabpanel" aria-labelledby="changes-tab" tabindex="0">
+              <!-- LEGAL -->
+              <div class="tab-pane fade" id="cat-legal" role="tabpanel" tabindex="0">
+                <nav class="nav privacy-section-pills" aria-label="Legal sections">
+                  <a class="nav-link active" href="#changes" data-section="changes">16. Policy changes</a>
+                  <a class="nav-link" href="#contact" data-section="contact">17. Contact us</a>
+                  <a class="nav-link" href="#law" data-section="law">18. Governing law</a>
+                </nav>
+                <article class="policy-block" id="changes">
             <h2>16. Changes to this policy</h2>
             <p>We may update this policy to reflect changes in law, regulation or our practices. We will publish the updated version on this page with a revised effective date. Material changes will be communicated via our website and, where appropriate, by email or SMS at least 30 days before they take effect.</p>
-          </div>
+                </article>
 
-          <div class="tab-pane fade content-section" id="contact" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                <article class="policy-block" id="contact">
             <h2>17. Contacting us</h2>
             <p>For privacy enquiries or to exercise your data protection rights:</p>
             <ul>
@@ -317,9 +314,9 @@
               <li><strong>Phone:</strong> <a href="tel:+260211238719">+260 211 238 719</a></li>
               <li><strong>Address:</strong> Plot No. 4448/8 Chaholi Road, Rhodespark, Lusaka, Zambia</li>
             </ul>
-          </div>
+                </article>
 
-          <div class="tab-pane fade content-section" id="law" role="tabpanel" aria-labelledby="law-tab" tabindex="0">
+                <article class="policy-block" id="law">
             <h2>18. Governing law &amp; jurisdiction</h2>
             <p>This policy is governed by the laws of the Republic of Zambia, including the <strong>Data Protection Act, 2021 (Act No. 3 of 2021)</strong>. Goodfellow Finance Limited also operates under Bank of Zambia supervision.</p>
             <p>If you are dissatisfied with our response to a privacy concern, you may:</p>
@@ -328,12 +325,13 @@
               <li>Lodge a complaint with the <strong>Office of the Data Protection Commissioner</strong> at <a href="https://www.dataprotection.gov.zm" target="_blank" rel="noopener noreferrer">www.dataprotection.gov.zm</a></li>
               <li>For financial services matters, escalate to the <strong>Bank of Zambia</strong> as described in our <a href="terms.html">Terms &amp; Conditions</a></li>
             </ol>
-          </div>
+                </article>
+              </div>
 
-            </div><!-- /.tab-content -->
-          </div><!-- /.privacy-tab-main -->
+            </div><!-- /.privacy-cat-panels -->
+          </div><!-- /.privacy-shell-body -->
 
-        </div><!-- /.privacy-tabs-layout -->
+        </div><!-- /.privacy-shell -->
         <div class="privacy-contact privacy-contact--tabs" data-aos="fade-up">
           <h2>Questions about your data?</h2>
           <p>Contact our Data Protection Officer — we are here to help.</p>

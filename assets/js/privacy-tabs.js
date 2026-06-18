@@ -1,39 +1,102 @@
 /**
- * Privacy policy tab navigation — hash deep-linking & mobile scroll
+ * Privacy policy — category tabs, section pills, hash deep-linking
  */
 (function() {
   'use strict';
 
-  function scrollActiveTabIntoView(nav) {
-    var active = nav.querySelector('.nav-link.active');
-    if (active && window.innerWidth < 992) {
-      active.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+  var SECTION_TO_CATEGORY = {
+    who: 'cat-overview',
+    scope: 'cat-overview',
+    definitions: 'cat-overview',
+    data: 'cat-data',
+    bases: 'cat-data',
+    sensitive: 'cat-data',
+    sharing: 'cat-data',
+    retention: 'cat-data',
+    security: 'cat-security',
+    breach: 'cat-security',
+    rights: 'cat-security',
+    cookies: 'cat-digital',
+    marketing: 'cat-digital',
+    automated: 'cat-digital',
+    ussd: 'cat-digital',
+    changes: 'cat-legal',
+    contact: 'cat-legal',
+    law: 'cat-legal'
+  };
+
+  function scrollToSection(id, delay) {
+    var el = document.getElementById(id);
+    if (el) {
+      setTimeout(function() {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, delay || 120);
     }
   }
 
-  function initPrivacyTabs() {
-    var nav = document.getElementById('privacyTabNav');
-    if (!nav || typeof bootstrap === 'undefined') return;
+  function activateCategory(catId, sectionId) {
+    var catNav = document.getElementById('privacyCatNav');
+    if (!catNav || typeof bootstrap === 'undefined') return;
 
-    var hash = window.location.hash.replace('#', '');
-    if (hash) {
-      var trigger = nav.querySelector('[data-bs-target="#' + hash + '"]');
-      if (trigger) {
-        bootstrap.Tab.getOrCreateInstance(trigger).show();
-      }
+    var trigger = catNav.querySelector('[data-bs-target="#' + catId + '"]');
+    var needsTabSwitch = trigger && !trigger.classList.contains('active');
+    if (trigger) {
+      bootstrap.Tab.getOrCreateInstance(trigger).show();
     }
 
-    nav.querySelectorAll('[data-bs-toggle="tab"]').forEach(function(btn) {
-      btn.addEventListener('shown.bs.tab', function(e) {
-        var target = e.target.getAttribute('data-bs-target');
-        if (target) {
-          history.replaceState(null, '', target);
+    if (sectionId) {
+      var panel = document.getElementById(catId);
+      if (panel) {
+        panel.querySelectorAll('.privacy-section-pills .nav-link').forEach(function(p) {
+          p.classList.toggle('active', p.getAttribute('data-section') === sectionId);
+        });
+      }
+      scrollToSection(sectionId, needsTabSwitch ? 350 : 120);
+    }
+  }
+
+  function initSectionPills() {
+    document.querySelectorAll('.privacy-section-pills .nav-link').forEach(function(pill) {
+      pill.addEventListener('click', function(e) {
+        e.preventDefault();
+        var sectionId = pill.getAttribute('data-section');
+        if (!sectionId) return;
+
+        var panel = pill.closest('.tab-pane');
+        if (panel) {
+          panel.querySelectorAll('.privacy-section-pills .nav-link').forEach(function(p) {
+            p.classList.remove('active');
+          });
         }
-        scrollActiveTabIntoView(nav);
+        pill.classList.add('active');
+        history.replaceState(null, '', '#' + sectionId);
+        scrollToSection(sectionId);
       });
     });
+  }
 
-    scrollActiveTabIntoView(nav);
+  function handleHash() {
+    var hash = window.location.hash.replace('#', '');
+    if (!hash) return;
+
+    if (hash.indexOf('cat-') === 0) {
+      activateCategory(hash, null);
+    } else if (SECTION_TO_CATEGORY[hash]) {
+      activateCategory(SECTION_TO_CATEGORY[hash], hash);
+    }
+  }
+
+  function initCategoryTabs() {
+    var catNav = document.getElementById('privacyCatNav');
+    if (!catNav || typeof bootstrap === 'undefined') return;
+
+    handleHash();
+    window.addEventListener('hashchange', handleHash);
+  }
+
+  function initPrivacyTabs() {
+    initCategoryTabs();
+    initSectionPills();
   }
 
   if (document.readyState === 'loading') {
