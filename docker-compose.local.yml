@@ -1,0 +1,6 @@
+# Local development only — maps host port 8080 to the container.
+# Coolify uses docker-compose.yml without host port binding.
+services:
+  web:
+    ports:
+      - "8080:80"
