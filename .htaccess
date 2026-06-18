@@ -1,0 +1,24 @@
+DirectoryIndex index.html index.php
+
+# Fresh HTML after updates; long cache for static assets (cPanel / LiteSpeed / Apache)
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html?|php)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+  <FilesMatch "\.(css|js|jpg|jpeg|png|gif|ico|svg|webp|woff|woff2|ttf|eot|map)$">
+    Header set Cache-Control "public, max-age=604800, immutable"
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Block web access to git metadata if present on the server
+  RewriteRule (^|/)\.git - [F,L]
+
+  # Serve /page as /page.html when the file exists
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^(.+?)/?$ $1.html [L]
+</IfModule>
