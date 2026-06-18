@@ -17,6 +17,10 @@
 
   $contact = new PHP_Email_Form;
   $contact->ajax = true;
+
+  if (empty($_POST['privacy_consent'])) {
+    die('You must agree to the Privacy & Data Protection Policy before submitting.');
+  }
   
   $contact->to = $receiving_email_address;
   $contact->from_name = $_POST['name'];

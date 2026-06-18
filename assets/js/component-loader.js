@@ -54,26 +54,28 @@
       loadComponent(component.name, component.target)
     );
 
-    // Also load global chat widget and append to body (no placeholder required)
-    const chatWidgetPromise = (async () => {
-      try {
-        const res = await fetch('components/chat-widget.html');
-        if (!res.ok) throw new Error('Failed to load chat-widget.html');
-        const html = await res.text();
-        const container = document.createElement('div');
-        container.innerHTML = html;
-        // Append all top-level nodes to body
-        Array.from(container.childNodes).forEach(node => {
-          // Only append element nodes to avoid stray text nodes
-          if (node.nodeType === 1) document.body.appendChild(node);
-        });
-      } catch (err) {
-        console.error('Chat widget failed to load:', err);
-      }
-    })();
+    function appendComponentToBody(componentFile) {
+      return (async () => {
+        try {
+          const res = await fetch(`components/${componentFile}`);
+          if (!res.ok) throw new Error(`Failed to load ${componentFile}`);
+          const html = await res.text();
+          const container = document.createElement('div');
+          container.innerHTML = html;
+          Array.from(container.childNodes).forEach(node => {
+            if (node.nodeType === 1) document.body.appendChild(node);
+          });
+        } catch (err) {
+          console.error(`${componentFile} failed to load:`, err);
+        }
+      })();
+    }
+
+    const chatWidgetPromise = appendComponentToBody('chat-widget.html');
+    const cookieBannerPromise = appendComponentToBody('cookie-banner.html');
 
     // Wait for all components to load, then initialize scripts
-    Promise.all([...loadPromises, chatWidgetPromise]).then(() => {
+    Promise.all([...loadPromises, chatWidgetPromise, cookieBannerPromise]).then(() => {
       console.log('All components loaded successfully');
       
       // Hide the preloader
@@ -90,6 +92,12 @@
       
       // Trigger a custom event for other scripts to hook into
       document.dispatchEvent(new CustomEvent('componentsLoaded'));
+
+      if (!document.querySelector('script[src*="cookie-consent.js"]')) {
+        const cookieScript = document.createElement('script');
+        cookieScript.src = 'assets/js/cookie-consent.js';
+        document.body.appendChild(cookieScript);
+      }
     }).catch((error) => {
       console.error('Error loading components:', error);
       // Hide preloader even if there's an error
