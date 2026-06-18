@@ -6260,10 +6260,22 @@ section,
 .page-banner,
 .privacy-page-banner {
   text-align: center;
-  padding: 130px 0 48px;
-  background: linear-gradient(135deg, var(--accent-color) 0%, #20c997 100%);
+  width: 100%;
+  min-height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 130px 1rem 52px;
+  background: linear-gradient(135deg, var(--accent-color, #28a745) 0%, #20c997 100%);
   position: relative;
   overflow: hidden;
+}
+
+/* Always show banner immediately — do not wait for AOS */
+.page-banner[data-aos],
+.privacy-page-banner[data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
 }
 
 .page-banner::before,
@@ -6282,6 +6294,7 @@ section,
   position: relative;
   z-index: 1;
   max-width: 820px;
+  width: 100%;
 }
 
 .page-banner h1,
