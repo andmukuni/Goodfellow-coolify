@@ -55,14 +55,25 @@
           </div>
         </div>
 
-        <div class="privacy-content">
+        <div class="privacy-tabs-layout privacy-tabs-layout--compact" data-aos="fade-up">
 
-          <div class="content-section">
+          <nav class="nav nav-pills privacy-tab-nav privacy-tab-nav--horizontal w-100" id="privacyTabNav" role="tablist" aria-label="Cookie notice sections">
+            <button class="nav-link active" id="cookie-what-tab" data-bs-toggle="tab" data-bs-target="#cookie-what" type="button" role="tab">What are cookies?</button>
+            <button class="nav-link" id="cookie-list-tab" data-bs-toggle="tab" data-bs-target="#cookie-list" type="button" role="tab">Cookies we use</button>
+            <button class="nav-link" id="cookie-manage-tab" data-bs-toggle="tab" data-bs-target="#cookie-manage" type="button" role="tab">Managing cookies</button>
+            <button class="nav-link" id="cookie-updates-tab" data-bs-toggle="tab" data-bs-target="#cookie-updates" type="button" role="tab">Updates</button>
+            <button class="nav-link" id="cookie-contact-tab" data-bs-toggle="tab" data-bs-target="#cookie-contact" type="button" role="tab">Contact</button>
+          </nav>
+
+          <div class="privacy-tab-main w-100">
+            <div class="tab-content privacy-tab-panels" id="privacyTabContent">
+
+              <div class="tab-pane fade show active content-section" id="cookie-what" role="tabpanel" tabindex="0">
             <h2>1. What are cookies?</h2>
             <p>Cookies are small text files stored on your device when you visit a website. They help the site function properly and may remember your preferences.</p>
           </div>
 
-          <div class="content-section">
+              <div class="tab-pane fade content-section" id="cookie-list" role="tabpanel" tabindex="0">
             <h2>2. Cookies we use</h2>
             <div class="table-responsive">
               <table class="table table-bordered privacy-data-table">
@@ -80,7 +91,7 @@
             <p>We do not currently use third-party advertising or analytics cookies on this website.</p>
           </div>
 
-          <div class="content-section">
+              <div class="tab-pane fade content-section" id="cookie-manage" role="tabpanel" tabindex="0">
             <h2>3. Managing cookies</h2>
             <p>When you first visit our site, a banner asks you to accept cookies or read this notice. You can also:</p>
             <ul>
@@ -91,14 +102,17 @@
             <p>Blocking essential cookies may affect how some parts of the website work.</p>
           </div>
 
-          <div class="content-section">
+              <div class="tab-pane fade content-section" id="cookie-updates" role="tabpanel" tabindex="0">
             <h2>4. Updates</h2>
             <p>We may update this Cookie Notice when we change how our website uses cookies. The effective date at the top will be revised accordingly.</p>
           </div>
 
-          <div class="content-section">
+              <div class="tab-pane fade content-section" id="cookie-contact" role="tabpanel" tabindex="0">
             <h2>5. Contact</h2>
             <p>Questions about cookies or your personal data? Contact our DPO at <a href="mailto:customercare@goodfellow.co.zm">customercare@goodfellow.co.zm</a> or read our <a href="privacy.html">Privacy &amp; Data Protection Policy</a>.</p>
+          </div>
+
+            </div>
           </div>
 
         </div>
@@ -123,6 +137,7 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/js/component-loader.js"></script>
+  <script src="assets/js/privacy-tabs.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 

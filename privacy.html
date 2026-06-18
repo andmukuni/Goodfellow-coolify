@@ -57,33 +57,74 @@
           </div>
         </div>
 
-        <div class="privacy-toc content-section" data-aos="fade-up">
-          <h2>On this page</h2>
-          <ol class="privacy-toc-list">
-            <li><a href="#who">Who we are</a></li>
-            <li><a href="#scope">Scope</a></li>
-            <li><a href="#definitions">Key terms</a></li>
-            <li><a href="#data">Personal data we collect</a></li>
-            <li><a href="#bases">Purposes &amp; lawful bases</a></li>
-            <li><a href="#sensitive">Sensitive personal data</a></li>
-            <li><a href="#sharing">Sharing &amp; disclosure</a></li>
-            <li><a href="#retention">Retention</a></li>
-            <li><a href="#security">Security</a></li>
-            <li><a href="#breach">Data-breach notification</a></li>
-            <li><a href="#rights">Your rights</a></li>
-            <li><a href="#cookies">Cookies</a></li>
-            <li><a href="#marketing">Marketing communications</a></li>
-            <li><a href="#automated">Automated decisions</a></li>
-            <li><a href="#ussd">USSD &amp; mobile services</a></li>
-            <li><a href="#changes">Changes to this policy</a></li>
-            <li><a href="#contact">Contacting us</a></li>
-            <li><a href="#law">Governing law</a></li>
-          </ol>
-        </div>
+        <div class="privacy-tabs-layout" data-aos="fade-up">
 
-        <div class="privacy-content" data-aos="fade-up">
+          <aside class="privacy-tab-sidebar">
+            <p class="privacy-tab-heading"><i class="bi bi-list-ul"></i> Policy sections</p>
+            <nav class="nav nav-pills flex-lg-column privacy-tab-nav" id="privacyTabNav" role="tablist" aria-label="Privacy policy sections">
 
-          <div class="content-section" id="who">
+              <button class="nav-link active" id="who-tab" data-bs-toggle="tab" data-bs-target="#who" type="button" role="tab" aria-controls="who" aria-selected="true">
+                <span class="tab-num">1</span> Who we are
+              </button>
+              <button class="nav-link" id="scope-tab" data-bs-toggle="tab" data-bs-target="#scope" type="button" role="tab" aria-controls="scope" aria-selected="false">
+                <span class="tab-num">2</span> Scope
+              </button>
+              <button class="nav-link" id="definitions-tab" data-bs-toggle="tab" data-bs-target="#definitions" type="button" role="tab" aria-controls="definitions" aria-selected="false">
+                <span class="tab-num">3</span> Key terms
+              </button>
+              <button class="nav-link" id="data-tab" data-bs-toggle="tab" data-bs-target="#data" type="button" role="tab" aria-controls="data" aria-selected="false">
+                <span class="tab-num">4</span> Data we collect
+              </button>
+              <button class="nav-link" id="bases-tab" data-bs-toggle="tab" data-bs-target="#bases" type="button" role="tab" aria-controls="bases" aria-selected="false">
+                <span class="tab-num">5</span> Lawful bases
+              </button>
+              <button class="nav-link" id="sensitive-tab" data-bs-toggle="tab" data-bs-target="#sensitive" type="button" role="tab" aria-controls="sensitive" aria-selected="false">
+                <span class="tab-num">6</span> Sensitive data
+              </button>
+              <button class="nav-link" id="sharing-tab" data-bs-toggle="tab" data-bs-target="#sharing" type="button" role="tab" aria-controls="sharing" aria-selected="false">
+                <span class="tab-num">7</span> Sharing
+              </button>
+              <button class="nav-link" id="retention-tab" data-bs-toggle="tab" data-bs-target="#retention" type="button" role="tab" aria-controls="retention" aria-selected="false">
+                <span class="tab-num">8</span> Retention
+              </button>
+              <button class="nav-link" id="security-tab" data-bs-toggle="tab" data-bs-target="#security" type="button" role="tab" aria-controls="security" aria-selected="false">
+                <span class="tab-num">9</span> Security
+              </button>
+              <button class="nav-link" id="breach-tab" data-bs-toggle="tab" data-bs-target="#breach" type="button" role="tab" aria-controls="breach" aria-selected="false">
+                <span class="tab-num">10</span> Data breaches
+              </button>
+              <button class="nav-link" id="rights-tab" data-bs-toggle="tab" data-bs-target="#rights" type="button" role="tab" aria-controls="rights" aria-selected="false">
+                <span class="tab-num">11</span> Your rights
+              </button>
+              <button class="nav-link" id="cookies-tab" data-bs-toggle="tab" data-bs-target="#cookies" type="button" role="tab" aria-controls="cookies" aria-selected="false">
+                <span class="tab-num">12</span> Cookies
+              </button>
+              <button class="nav-link" id="marketing-tab" data-bs-toggle="tab" data-bs-target="#marketing" type="button" role="tab" aria-controls="marketing" aria-selected="false">
+                <span class="tab-num">13</span> Marketing
+              </button>
+              <button class="nav-link" id="automated-tab" data-bs-toggle="tab" data-bs-target="#automated" type="button" role="tab" aria-controls="automated" aria-selected="false">
+                <span class="tab-num">14</span> Automated decisions
+              </button>
+              <button class="nav-link" id="ussd-tab" data-bs-toggle="tab" data-bs-target="#ussd" type="button" role="tab" aria-controls="ussd" aria-selected="false">
+                <span class="tab-num">15</span> USSD &amp; mobile
+              </button>
+              <button class="nav-link" id="changes-tab" data-bs-toggle="tab" data-bs-target="#changes" type="button" role="tab" aria-controls="changes" aria-selected="false">
+                <span class="tab-num">16</span> Policy changes
+              </button>
+              <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">
+                <span class="tab-num">17</span> Contact us
+              </button>
+              <button class="nav-link" id="law-tab" data-bs-toggle="tab" data-bs-target="#law" type="button" role="tab" aria-controls="law" aria-selected="false">
+                <span class="tab-num">18</span> Governing law
+              </button>
+
+            </nav>
+          </aside>
+
+          <div class="privacy-tab-main">
+            <div class="tab-content privacy-tab-panels" id="privacyTabContent">
+
+          <div class="tab-pane fade show active content-section" id="who" role="tabpanel" aria-labelledby="who-tab" tabindex="0">
             <h2>1. Who we are</h2>
             <p><strong>Goodfellow Finance Limited</strong> is an indigenous Zambian microfinance institution established in 2017 and registered with the Bank of Zambia. We provide payday salary advances and short-term loans to employed individuals across Zambia through 28 branches nationwide.</p>
             <ul>
@@ -100,7 +141,7 @@
             </ul>
           </div>
 
-          <div class="content-section" id="scope">
+          <div class="tab-pane fade content-section" id="scope" role="tabpanel" aria-labelledby="scope-tab" tabindex="0">
             <h2>2. Scope of this policy</h2>
             <p>This policy applies to personal data processed through:</p>
             <ul>
@@ -114,7 +155,7 @@
             <p>This policy does not apply to third-party websites linked from our site. Please review their privacy policies separately.</p>
           </div>
 
-          <div class="content-section" id="definitions">
+          <div class="tab-pane fade content-section" id="definitions" role="tabpanel" aria-labelledby="definitions-tab" tabindex="0">
             <h2>3. Key terms (DPA Section 2)</h2>
             <ul>
               <li><strong>Personal data</strong> — information identifying or relating to an identifiable individual (e.g. name, NRC number, phone number, bank details).</li>
@@ -126,7 +167,7 @@
             </ul>
           </div>
 
-          <div class="content-section" id="data">
+          <div class="tab-pane fade content-section" id="data" role="tabpanel" aria-labelledby="data-tab" tabindex="0">
             <h2>4. Personal data we collect</h2>
             <p>We collect different categories depending on your relationship with us:</p>
             <div class="table-responsive">
@@ -146,7 +187,7 @@
             </div>
           </div>
 
-          <div class="content-section" id="bases">
+          <div class="tab-pane fade content-section" id="bases" role="tabpanel" aria-labelledby="bases-tab" tabindex="0">
             <h2>5. Purposes &amp; lawful bases</h2>
             <p>We process personal data only where a lawful basis under Section 13 of the Data Protection Act applies:</p>
             <div class="table-responsive">
@@ -169,13 +210,13 @@
             </div>
           </div>
 
-          <div class="content-section" id="sensitive">
+          <div class="tab-pane fade content-section" id="sensitive" role="tabpanel" aria-labelledby="sensitive-tab" tabindex="0">
             <h2>6. Sensitive personal data</h2>
             <p>Loan processing requires financial and employment-related personal data. We process this data only for lending, recovery, regulatory compliance and related legitimate purposes. We apply additional safeguards including restricted access, staff confidentiality obligations and secure storage systems.</p>
             <p>We do not sell your personal data to third parties.</p>
           </div>
 
-          <div class="content-section" id="sharing">
+          <div class="tab-pane fade content-section" id="sharing" role="tabpanel" aria-labelledby="sharing-tab" tabindex="0">
             <h2>7. Sharing &amp; disclosure</h2>
             <p>We may share personal data with:</p>
             <ul>
@@ -191,7 +232,7 @@
             <p>We require all third-party processors to protect personal data in line with the Data Protection Act, 2021.</p>
           </div>
 
-          <div class="content-section" id="retention">
+          <div class="tab-pane fade content-section" id="retention" role="tabpanel" aria-labelledby="retention-tab" tabindex="0">
             <h2>8. Retention</h2>
             <p>We retain personal data only for as long as necessary for the purposes collected:</p>
             <ul>
@@ -205,7 +246,7 @@
             <p>When data is no longer needed, we securely delete or anonymise it.</p>
           </div>
 
-          <div class="content-section" id="security">
+          <div class="tab-pane fade content-section" id="security" role="tabpanel" aria-labelledby="security-tab" tabindex="0">
             <h2>9. Security</h2>
             <p>We implement technical and organisational measures to protect personal data, including:</p>
             <ul>
@@ -217,12 +258,12 @@
             </ul>
           </div>
 
-          <div class="content-section" id="breach">
+          <div class="tab-pane fade content-section" id="breach" role="tabpanel" aria-labelledby="breach-tab" tabindex="0">
             <h2>10. Data-breach notification</h2>
             <p>If a personal data breach occurs that is likely to result in a risk to your rights, we will notify the <strong>Office of the Data Protection Commissioner</strong> within <strong>24 hours</strong> as required by Section 49 of the Act. Where the breach is likely to result in a high risk to you, we will also notify affected data subjects without undue delay.</p>
           </div>
 
-          <div class="content-section" id="rights">
+          <div class="tab-pane fade content-section" id="rights" role="tabpanel" aria-labelledby="rights-tab" tabindex="0">
             <h2>11. Your rights as a data subject</h2>
             <p>Under the Data Protection Act, 2021, you have the right to:</p>
             <ul>
@@ -237,12 +278,12 @@
             <p><strong>Office of the Data Protection Commissioner:</strong> <a href="https://www.dataprotection.gov.zm" target="_blank" rel="noopener noreferrer">www.dataprotection.gov.zm</a></p>
           </div>
 
-          <div class="content-section" id="cookies">
+          <div class="tab-pane fade content-section" id="cookies" role="tabpanel" aria-labelledby="cookies-tab" tabindex="0">
             <h2>12. Cookies</h2>
             <p>Our website uses cookies and similar technologies. For full details on the cookies we use and how to manage your preferences, please read our <a href="cookies.html">Cookie Notice</a>.</p>
           </div>
 
-          <div class="content-section" id="marketing">
+          <div class="tab-pane fade content-section" id="marketing" role="tabpanel" aria-labelledby="marketing-tab" tabindex="0">
             <h2>13. Marketing communications</h2>
             <p>We may send you information about loan products and promotions by SMS, email or phone only where permitted by law and, where required, with your consent. You may opt out at any time by:</p>
             <ul>
@@ -252,22 +293,22 @@
             </ul>
           </div>
 
-          <div class="content-section" id="automated">
+          <div class="tab-pane fade content-section" id="automated" role="tabpanel" aria-labelledby="automated-tab" tabindex="0">
             <h2>14. Automated decisions &amp; profiling</h2>
             <p>We may use automated systems to assist with credit assessment and affordability checks. You will not be subject to a decision based solely on automated processing that produces legal or similarly significant effects without human review where required by the Act. You may request human intervention by contacting our DPO.</p>
           </div>
 
-          <div class="content-section" id="ussd">
+          <div class="tab-pane fade content-section" id="ussd" role="tabpanel" aria-labelledby="ussd-tab" tabindex="0">
             <h2>15. USSD &amp; mobile services</h2>
             <p>When you use <strong>*774#</strong> or other mobile loan channels, your mobile number and transaction data are processed by your mobile network operator and shared with us as necessary to deliver the service. By using these services you acknowledge this processing as described in this policy and our loan terms.</p>
           </div>
 
-          <div class="content-section" id="changes">
+          <div class="tab-pane fade content-section" id="changes" role="tabpanel" aria-labelledby="changes-tab" tabindex="0">
             <h2>16. Changes to this policy</h2>
             <p>We may update this policy to reflect changes in law, regulation or our practices. We will publish the updated version on this page with a revised effective date. Material changes will be communicated via our website and, where appropriate, by email or SMS at least 30 days before they take effect.</p>
           </div>
 
-          <div class="content-section" id="contact">
+          <div class="tab-pane fade content-section" id="contact" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
             <h2>17. Contacting us</h2>
             <p>For privacy enquiries or to exercise your data protection rights:</p>
             <ul>
@@ -278,7 +319,7 @@
             </ul>
           </div>
 
-          <div class="content-section" id="law">
+          <div class="tab-pane fade content-section" id="law" role="tabpanel" aria-labelledby="law-tab" tabindex="0">
             <h2>18. Governing law &amp; jurisdiction</h2>
             <p>This policy is governed by the laws of the Republic of Zambia, including the <strong>Data Protection Act, 2021 (Act No. 3 of 2021)</strong>. Goodfellow Finance Limited also operates under Bank of Zambia supervision.</p>
             <p>If you are dissatisfied with our response to a privacy concern, you may:</p>
@@ -289,9 +330,11 @@
             </ol>
           </div>
 
-        </div>
+            </div><!-- /.tab-content -->
+          </div><!-- /.privacy-tab-main -->
 
-        <div class="privacy-contact" data-aos="fade-up">
+        </div><!-- /.privacy-tabs-layout -->
+        <div class="privacy-contact privacy-contact--tabs" data-aos="fade-up">
           <h2>Questions about your data?</h2>
           <p>Contact our Data Protection Officer — we are here to help.</p>
           <div class="contact-details">
@@ -321,6 +364,7 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/js/component-loader.js"></script>
+  <script src="assets/js/privacy-tabs.js"></script>
   <script src="assets/js/main.js"></script>
   <script>
     document.addEventListener('componentsLoaded', function() {
